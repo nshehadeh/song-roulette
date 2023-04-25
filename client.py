@@ -75,7 +75,6 @@ async def join_game():
                 print(message)
                 vote = input("Who do you think listened to this song? ")
                 # Parse the song title and artist from the string
-                """
 		song_str = message
                 song_parts = song_str.split(":")[1].strip().split("by")
                 song_title = song_parts[0].strip()
@@ -94,7 +93,6 @@ async def join_game():
                     # Play the song on the user's Spotify app or device
                     sp.start_playback(uris=['spotify:track:' + track_id])
                     print(f"Now playing: {song_title} by {song_artist}")
-		"""
                 await websocket.send(vote)
             elif "Scoreboard:" in message:
                 print(message)
